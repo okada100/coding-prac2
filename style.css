@@ -1,0 +1,119 @@
+/*--- 共通 ---*/
+@charset "utf-8";
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+ list-style: none;
+}
+
+/*--- mainvisual ---*/
+
+.main-visual {
+  background-image: url(../img/mainvisual.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 60px;
+}
+
+
+/*--- TEXT ---*/
+
+h1 {
+  margin-bottom: 20px;
+}
+
+
+.text-box {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+
+/*--- PIC ---*/
+
+.pic-box {
+  display: flex;
+  margin-bottom: 60px;
+}
+
+/* widthの幅を3等分にする。[calc]は割り切れない場合でも使える。 */
+.pic-box li {
+  width: calc(100%/3);
+}
+
+/* [object-fit: cover]縦横比を保持してボックスを完全に覆うようリサイズ */
+.pic-box li img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+
+/*--- button ---*/
+
+button {
+  width: 250px;
+  height: 60px;
+  border: 1px solid #333;
+  display: block;
+  margin: 0 auto;
+}
+
+button a {
+  text-decoration: none;
+  color: #333;
+}
+
+
+/*--- footer ---*/
+
+footer {
+  text-align: center;
+}
+
+footer a,footer p {
+  color: #333;
+  font-size: 0.75rem;
+}
+
+.sns-link a {
+  margin: 0 10px;
+}
+
+.sns-link {
+  display: flex;
+  justify-content: center;
+}
+
+.copyright {
+  padding: 10px 0;
+}
+
+/*--- SP ---*/
+
+@media screen and (max-width: 834px) {
+
+/* 画像を縦並びに変更 */
+  .pic-box {
+    flex-direction: column;
+  }
+/* 画像の幅を画面幅いっぱいに変更 */
+  .pic-box li {
+    width: 100%;
+  }
+}
