@@ -21,11 +21,9 @@ ul {
 /*--- mainvisual ---*/
 
 .main-visual {
-  background-image: url(../img/mainvisual.jpg);
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center top;
   margin-bottom: 60px;
 }
 
